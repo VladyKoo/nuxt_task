@@ -3,12 +3,13 @@
 ## Build Setup
 
 ```bash
-# install dependencies
+# Установить зависимости
 $ npm install
 
-# run nuxt development mode at localhost:3000
+# запустить приложение Nuxt по адресу localhost:3000
 $ npm run dev
 
-# run json-serverat localhost:3001
+# запустить локальный сервер Node.js по адресу localhost:3001
+# db.json это фейковая база данных
 $ json-server --watch db.json --port 3001
 ```
