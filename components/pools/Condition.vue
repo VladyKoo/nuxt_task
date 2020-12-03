@@ -15,7 +15,7 @@
           </div>
           <div class="item condition-selector">
             <select
-              :input="condition.condition"
+              :value="condition.condition"
               @input="updateCondition($event, condition.id)"
               class="selector"
             >
@@ -86,7 +86,7 @@ export default {
 <style scoped>
 .condition-container {
   position: relative;
-  background-color: #f8e8c2;
+  background-color: #f8faff;
   border-bottom: 2px solid #e3e3e3;
   padding: 30px 20px;
 }

@@ -37,7 +37,7 @@ import Condition from "@/components/pools/Condition";
 export default {
   components: {
     NavPolls,
-    Condition
+    Condition,
   },
 
   methods: {
@@ -52,9 +52,9 @@ export default {
         const response = await fetch("http://localhost:3001/data", {
           method: "POST",
           headers: {
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
           },
-          body: JSON.stringify(data)
+          body: JSON.stringify(data),
         });
         if (!response.ok) {
           throw new Error("Ответ не ok.");
@@ -63,11 +63,11 @@ export default {
       } catch (error) {
         console.log("Возникла проблема с POST fetch запросом: ", error.message);
       }
-    }
+    },
   },
   created() {
     this.$store.dispatch("GET_CONDITION");
-  }
+  },
 };
 </script>
 
@@ -76,10 +76,11 @@ export default {
   font-size: 20px;
   color: #aeaeae;
   padding-top: 20px;
-  height: 80px;
+  height: 60px;
+  margin-left: 20px;
 }
 .conditions {
-  padding: 0 20px 0 20px;
+  /* padding: 0 20px 0 20px; */
 }
 
 .condition {

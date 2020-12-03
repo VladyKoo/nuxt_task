@@ -1,6 +1,39 @@
 {
   "data": {
-    "conditions": [],
+    "conditions": [
+      {
+        "id": "f56fa2de",
+        "condition": "Возраст респондента",
+        "cardType": [
+          null
+        ],
+        "cardStatus": [
+          null
+        ],
+        "age": [
+          {
+            "ageFrom": "1",
+            "ageTo": "2"
+          }
+        ]
+      },
+      {
+        "id": "f4bafe51",
+        "condition": "Тип карты лояльности",
+        "cardType": [
+          "Gold"
+        ],
+        "cardStatus": [
+          null
+        ],
+        "age": [
+          {
+            "ageFrom": null,
+            "ageTo": null
+          }
+        ]
+      }
+    ],
     "initConditionNames": {
       "initConditions": [
         {

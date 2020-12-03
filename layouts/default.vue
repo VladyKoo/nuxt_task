@@ -72,7 +72,7 @@ button:active {
 
 .page-content {
   width: 1000px;
-  padding: 10px;
+  /* padding: 10px; */
   box-shadow: 0 25px 28px rgba(0, 0, 0, 0.15);
   border-radius: 5px;
 
