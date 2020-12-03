@@ -19,7 +19,7 @@
           </div>
           <div class="foter-btn">
             <button class="left-btn">Протестировать опрос</button>
-            <button class="right-btn">
+            <button @click="submitData" class="right-btn">
               Далее
               <img src="@/static/right-arrow.png" />
             </button>
@@ -43,7 +43,30 @@ export default {
   methods: {
     addCondition() {
       this.$store.commit("ADD_CONDITION");
+    },
+    async submitData() {
+      const data = {};
+      data.conditions = this.$store.getters.conditions;
+      data.initConditionNames = this.$store.getters.initConditionNames;
+      try {
+        const response = await fetch("http://localhost:3001/data", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(data)
+        });
+        if (!response.ok) {
+          throw new Error("Ответ не ok.");
+        }
+        const responseData = await response.json();
+      } catch (error) {
+        console.log("Возникла проблема с POST fetch запросом: ", error.message);
+      }
     }
+  },
+  created() {
+    this.$store.dispatch("GET_CONDITION");
   }
 };
 </script>

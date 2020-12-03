@@ -73,7 +73,6 @@ export default {
   },
   methods: {
     updateCondition(e, id) {
-      console.log({ e: e.target.value, id });
       const payload = { id, value: e.target.value };
       this.$store.commit("UPDATE_CONDITION", payload);
     },

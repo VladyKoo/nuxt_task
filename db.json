@@ -1,0 +1,57 @@
+{
+  "data": {
+    "conditions": [],
+    "initConditionNames": {
+      "initConditions": [
+        {
+          "id": 1,
+          "name": "Выберите условие"
+        },
+        {
+          "id": 2,
+          "name": "Возраст респондента"
+        },
+        {
+          "id": 3,
+          "name": "Тип карты лояльности"
+        },
+        {
+          "id": 4,
+          "name": "Статус карты лояльности"
+        }
+      ],
+      "initCardTypes": [
+        {
+          "id": 1,
+          "type": "Gold"
+        },
+        {
+          "id": 2,
+          "type": "Silver"
+        },
+        {
+          "id": 3,
+          "type": "Platinum"
+        }
+      ],
+      "initCardStatuses": [
+        {
+          "id": 1,
+          "type": "Активна"
+        },
+        {
+          "id": 2,
+          "type": "Не активна"
+        },
+        {
+          "id": 3,
+          "type": "Зарегистрирована"
+        },
+        {
+          "id": 4,
+          "type": "Не зарегистрирована"
+        }
+      ]
+    }
+  }
+}

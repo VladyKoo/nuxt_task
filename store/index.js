@@ -30,6 +30,11 @@ export const state = () => ({
 });
 
 export const mutations = {
+  SET_CONDITION(state, payload) {
+    state.conditions = payload.conditions;
+    state.initConditionNames = payload.initConditionNames;
+  },
+
   ADD_CONDITION(state) {
     state.conditions.push({
       id: `f${(~~(Math.random() * 1e8)).toString(16)}`,
@@ -100,7 +105,22 @@ export const mutations = {
   }
 };
 
-export const actions = {};
+export const actions = {
+  async GET_CONDITION({ commit }) {
+    try {
+      const response = await fetch("http://localhost:3001/data");
+      if (!response.ok) {
+        throw new Error("Ответ не ok.");
+      }
+      const responseData = await response.json();
+      if (responseData) {
+        commit("SET_CONDITION", responseData);
+      }
+    } catch (error) {
+      console.log("Возникла проблема с GET fetch запросом: ", error.message);
+    }
+  }
+};
 
 export const getters = {
   conditions: s => s.conditions,
